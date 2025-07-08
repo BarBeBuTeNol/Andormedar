@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie</title>
+    <link rel="stylesheet" href="/Fontend/VsCode/Edit/Edit.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="/Fontend/VsCode/Home/Home.html"><img src="/Photo/logo--6.jpg" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Fontend/VsCode/Action/Action.html">Action</a></li>
+                <li><a href="/Fontend/VsCode/Advenger/Advenger.html">Adventure</a></li>
+                <li><a href=/Fontend/VsCode/Marvel/Marvel.html">Marvel</a></li>
+                <li><a href="/Fontend/VsCode/Comady/Comady.html">Comedy</a></li>
+                <li><a href="/Fontend/VsCode/Romactics/Romactics.html">Romantics</a></li>
+                <li><a href="/Fontend/VsCode/Most_in_thailand/Most _in_thailand.html">Most In Thailand</a></li>
+                <li><button class="edit-button">Edit Movie</button></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies...">
+            <button type="button" id="search-button">Search</button>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="movie-list">
+            <h2>Movies</h2>
+            <div id="movies-container">
+                <!-- Movie items will be dynamically added here -->
+            </div>
+            <button class="edit-button" id="add-movie-button">Add New Movie</button>
+        </section>
+    </main>
+
+    <!-- Modal for Add/Edit Movie -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Add/Edit Movie</h2>
+            <form id="movie-form">
+                <label for="movie-title">Movie Title:</label>
+                <input type="text" id="movie-title" required>
+                <label for="movie-poster">Poster URL:</label>
+                <input type="text" id="movie-poster" required>
+                <label for="movie-video">Video URL:</label>
+                <input type="text" id="movie-video" required>
+                <label for="movie-description">Description:</label>
+                <textarea id="movie-description" rows="4" required></textarea>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Andromedar. All rights reserved.</p>
+    </footer>
+
+    <script src="/Fontend/VsCode/Edit/Edit.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andromedar Movies</title>
+    <link rel="stylesheet" href="/Fontend//VsCode/Advenger/Advenger.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/Fontend/VsCode/Home/Home.html"><img src="/Photo/logo--6.jpg" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Fontend/VsCode/Action/Action.html">Action</a></li>
+                <li><a href="/Fontend/VsCode/Advenger/Advenger.html">Adventure</a></li>
+                <li><a href="/Fontend/VsCode/Marvel/Marvel.html">Marvel</a></li>
+                <li><a href="/Fontend/VsCode/Comady/Comady.html">Comedy</a></li>
+                <li><a href="/Fontend/VsCode/Romactics/Romactics.html">Romantics</a></li>
+                <li><a href="/Fontend/VsCode/Most_in_thailand/Most _in_thailand.html">Most In Thailand</a></li>
+                <li><button class="edit-button" onclick="window.location.href='/Backend/Ui_test_getDataDB/'">Edit Movie</button></li>
+            </ul>
+        </nav>     
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies...">
+            <button type="button" id="search-button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery" id="gallery"></section>
+        <div class="movie-detail" id="movie-detail" style="display: none;">
+            <button id="back-button">Back</button>
+            <video id="movie-video" controls></video>
+            <div class="movie-description">
+                <h2 id="movie-title"></h2>
+                <p id="movie-description-text"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Andromedar. All rights reserved.</p>
+    </footer>
+
+    <script src="/Fontend/VsCode/Advenger/Advenger.js"></script>
+</body>
+</html>

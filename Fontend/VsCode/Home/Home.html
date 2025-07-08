@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andromedar</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="/Fontend/VsCode/Home/Home.html"><img src="/Photo/logo--6.jpg" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Fontend/VsCode/Action/Action.html">Action</a></li>
+                <li><a href="/Fontend//VsCode/Advenger/Advenger.html">Adventure</a></li>
+                <li><a href="/Fontend//VsCode/Marvel/Marvel.html">Marvel</a></li>
+                <li><a href="/Fontend//VsCode/Comady/Comady.html">Comedy</a></li>
+                <li><a href="/Fontend//VsCode/Romactics/Romactics.html">Romantics</a></li>
+                <li><a href="/Fontend//VsCode/Most_in_thailand/Most _in_thailand.html">Most In Thailand</a></li>
+                <li><button class="edit-button" onclick="window.location.href='/Backend/Ui_test_getDataDB/'">Edit Movie</button></li>
+            </ul>
+        </nav>     
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies...">
+            <button type="button" id="search-button">Search</button>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Featured Show -->
+        <section class="featured">
+            <video class="background-video" autoplay loop>
+                <source src="Video/Intro cinema 1.mp4" type="video/mp4">
+            </video>
+            <div class="media-container">
+                <div class="featured-video">
+                    <video id="movie-video" autoplay loop muted>
+                        <source src="/Video/Mini_Ject_Web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="featured-image">
+                    <img id="movie-poster" src="/Photo/Poster.jpg" alt="Deadpool & Wolverine">
+                    <div class="movie-description">
+                        <p id="movie-description-text">Please Choose The Movie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Play Button -->
+        <div class="play-button-container">
+            <button id="play-button">Play Movie</button>
+        </div>
+
+        <!-- Trending Section -->
+        <section class="trending">
+            <h2>Trending in Thailand</h2>
+            <div class="trending-shows">
+                <!-- Movie items -->
+                <div class="show-item" data-title="deadpool 3"><img src="/Photo/Deadpool & Wolverine (2024).jpg" alt="Show 1"></div>
+                <div class="show-item" data-title="alien"><img src="/Photo/ALIEN_ ROMULUS (2024) 🔥.jpg 2.jpg" alt="Show 2"></div>
+                <div class="show-item" data-title="anong"><img src="/Photo/anong 1.jpg 2.webp" alt="Show 3"></div>
+                <div class="show-item" data-title="furiosa"><img src="/Photo/Furiosa A Mad Max Saga (2024).jpg 2.jpg" alt="Show 4"></div>
+                <div class="show-item" data-title="a quiet place day one"><img src="/Photo/A q 1.jpg 4.jpg" alt="Show 5"></div>
+                <div class="show-item" data-title="abigail"><img src="/Photo/ab 1.jpg" alt="Show 6"></div>
+                <div class="show-item" data-title="the crow"><img src="/Photo/Crow 1.jpg" alt="Show 7"></div>
+                <div class="show-item" data-title="deadpool"><img src="/Photo/Deadpool 1.jpg" alt="Show 8"></div>
+                <div class="show-item" data-title="deadpool 2"><img src="/Photo/Deadpool 2.jpg" alt="Show 9"></div>
+                <div class="show-item" data-title="dune"><img src="/Photo/Dune --1.jpg" alt="Show 10"></div>
+                <div class="show-item" data-title="dune part two"><img src="/Photo/Dune --2.jpg" alt="Show 11"></div>
+                <div class="show-item" data-title="exhuma"><img src="/Photo/Ex 1.jpg" alt="Show 12"></div>
+                <div class="show-item" data-title="fall guy"><img src="/Photo/fall guy --1.jpg" alt="Show 13"></div>
+                <div class="show-item" data-title="kong"><img src="/Photo/kong 1.jpg" alt="Show 14"></div>
+                <div class="show-item" data-title="ghost"><img src="/Photo/ghost 1.jpg" alt="Show 15"></div>
+                <div class="show-item" data-title="ma"><img src="/Photo/ma 1.jpg" alt="Show 16"></div>
+                <div class="show-item" data-title="kungfu"><img src="/Photo/Panda 1.jpg" alt="Show 17"></div>
+                <div class="show-item" data-title="a hunting in venice"><img src="/Photo/paoro 1.jpg" alt="Show 18"></div>
+                <div class="show-item" data-title="supparoi"><img src="/Photo/Supperroi.jpg" alt="Show 19"></div>
+                <div class="show-item" data-title="trap"><img src="/Photo/trap 1.jpg" alt="Show 20"></div>
+                <div class="show-item" data-title="twisters"><img src="/Photo/Twisters Movie Poster.jpg 1.jpg" alt="Show 21"></div>
+                <div class="show-item" data-title="wiman"><img src="/Photo/Wiman.webp" alt="Show 22"></div>
+                <div class="show-item" data-title="term 3"><img src="/Photo/term 3.webp" alt="Show 23"></div>
+                <div class="show-item" data-title="john 1"><img src="/Photo/John Wick 1.1.jpg" alt="Show 24"></div>
+                <div class="show-item" data-title="john 2"><img src="/Photo/John Wick 2.1.jpg" alt="Show 25"></div>
+                <div class="show-item" data-title="john 3"><img src="/Photo/John Wick 3.1.jpg" alt="Show 26"></div>
+                <div class="show-item" data-title="john 4"><img src="/Photo/John Wick 4.1.jpg" alt="Show 27"></div>
+            </div>
+            <div class="scroll-buttons">
+                <button id="prev-button">&#8249;</button>
+                <button id="next-button">&#8250;</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Andromedar. All rights reserved.</p>
+    </footer>
+
+    <script src="/Fontend/VsCode/Home/Home.js"></script>
+</body>
+
+</html>

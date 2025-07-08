@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andromedar Movies</title>
+    <link rel="stylesheet" href="/Fontend/VsCode/Edit_New/Edit_New.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/Fontend/VsCode/Home/Home.html"><img src="/Photo/logo--6.jpg" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Fontend/VsCode/Action/Action.html">Action</a></li>
+                <li><a href="/Fontend/VsCode/Advenger/Advenger.html">Adventure</a></li>
+                <li><a href="/Fontend/VsCode/Marvel/Marvel.html">Marvel</a></li>
+                <li><a href="/Fontend/VsCode/Comady/Comady.html">Comedy</a></li>
+                <li><a href="/Fontend/VsCode/Romactics/Romactics.html">Romantics</a></li>
+                <li><a href="/Fontend/VsCode/Most_in_thailand/Most _in_thailand.html">Most In Thailand</a></li>
+                <li><button class="action-button" onclick="openModal()">Add Movie</button></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies..." class="search-input">
+            <button type="button" id="search-button" class="action-button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery" id="gallery"></section>
+        <div class="movie-detail" id="movie-detail" style="display: none;">
+            <h2 id="movie-title"></h2>
+            <img id="movie-image" src="" alt="Movie Image">
+            <p class="movie-description" id="movie-description-text"></p>
+            <div class="button-group">
+                <button id="back-button" onclick="backToGallery()" class="action-button">Back</button>
+                <button class="action-button" onclick="openModal()">Edit</button>
+                <button class="delete-button action-button" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Andromedar. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Add/Edit Movie -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Add/Edit Movie</h2>
+            <input type="text" placeholder="ชื่อหนัง" id="movie-title-input" />
+            <input type="text" placeholder="URL รูปภาพ" id="movie-image-input" />
+            <input type="text" placeholder="URL วิดีโอ" id="movie-video-input" /> <!-- ฟิลด์ URL วิดีโอ -->
+            <textarea placeholder="คำอธิบาย" id="movie-description-input"></textarea>
+            <button onclick="saveChanges()" class="action-button">Done</button>
+        </div>
+    </div>
+
+    <script src="/Fontend/VsCode/Edit_New/Edit_New.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* ใช้ฟอนต์ Roboto */
+    background-color: #000;
+    color: #fff;
+    background-color: #000; /* สีพื้นหลังหลัก */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(17, 17, 17, 0.9); /* ทำให้พื้นหลังมีความโปร่งใส */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
+}
+
+header .logo img {
+    height: 100px;
+    border-radius: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; /* ทำให้ลิงก์ในเมนูหนาขึ้น */
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff007f, #ff7e5f);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: linear-gradient(90deg, #ff7e5f, #ff007f);
+    color: #ffea00; /* เปลี่ยนสีเมื่อ hover */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* เพิ่มเงาสีขาว */
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.6);
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลาง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    flex-wrap: wrap; /* รองรับการพับแถว */
+    margin: 20px 0; /* ระยะห่างด้านบนและล่าง */
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff007f, #ff7e5f);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(255, 0, 127, 0.5); /* ทำให้เงาเข้มขึ้น */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.button-container button:hover {
+    background: linear-gradient(90deg, #ff7e5f, #ff007f);
+    transform: translateY(-3px); /* ยกปุ่มขึ้นเมื่อโฮเวอร์ */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลง */
+    box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.6);
+}
+
+/* ปุ่ม Edit Movie */
+.edit-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff007f, #ff7e5f);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.edit-button:hover {
+    background: linear-gradient(90deg, #ff7e5f, #ff007f);
+    transform: translateY(-3px); /* ยกปุ่มขึ้นเมื่อโฮเวอร์ */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลง */
+    box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.6);
+}
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    border-radius: 20px; /* ทำให้มุมโค้งเหมือนปุ่มอื่น */
+    background: linear-gradient(90deg, #ff007f, #ff7e5f); /* เพิ่มพื้นหลังแบบกราเดียนต์ */
+    color: #fff; /* เปลี่ยนสีตัวอักษรเป็นขาว */
+    border: none; /* ไม่มีกรอบ */
+    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
+    transform: translateY(-3px); /* ยกปุ่มขึ้นเมื่อโฮเวอร์ */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลง */
+    font-size: 16px; /* ขนาดตัวอักษร */
+}
+
+.search-container button:hover {
+    background: linear-gradient(90deg, #ff7e5f, #ff007f); /* เปลี่ยนสีพื้นหลังเมื่อชี้ */
+    transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อชี้ */
+    box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.6); /* เพิ่มเงา */
+}
+
+/* Play Button Styling */
+.play-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#play-button {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff007f, #ff7e5f);
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#play-button:hover {
+    background: linear-gradient(90deg, #ff7e5f, #ff007f);
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 0, 127, 0.5);
+}
+
+#play-button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+#play-button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Featured Section Styling */
+.featured {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #000;
+    border-radius: 15px; /* ทำให้มุมโค้ง */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 1;
+    border-radius: 15px; /* ทำให้มุมโค้ง */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
+}
+
+.featured-video video {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+
+.featured-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.featured-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+}
+
+.movie-description {
+    font-size: 18px;
+    max-width: 500px;
+    font-weight: 300;
+    color: #fff; /* เปลี่ยนเป็นสีขาว */
+    font-size: 16px; /* ขนาดที่พอเหมาะ */
+    line-height: 1.5; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+/* Trending Section Styling */
+.trending {
+    padding: 40px 20px;
+    background-color: #111;
+    border-radius: 15px; /* ทำให้มุมโค้ง */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
+    margin: 40px 20px;
+    position: relative;
+}
+
+.trending h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff007f, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* เพิ่มการสนับสนุนเบราว์เซอร์อื่น */
+    color: transparent; /* ทำให้แน่ใจว่าไม่แสดงสีพื้นหลัง */
+}
+
+.trending-shows {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.show-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.show-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.show-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Scroll Buttons Styling */
+.scroll-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    header nav ul {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .featured-video video {
+        height: 250px;
+    }
+
+    .featured-image img {
+        width: 200px;
+    }
+
+    .movie-description {
+        font-size: 16px;
+    }
+
+    .trending {
+        margin: 20px;
+    }
+
+    .trending-shows {
+        gap: 10px;
+    }
+
+    .show-item {
+        width: 140px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .featured-video video {
+        height: 250px;
+    }
+
+    .featured-image img {
+        width: 200px;
+    }
+
+    .movie-description {
+        font-size: 16px;
+    }
+
+    .trending {
+        margin: 20px;
+    }
+
+    .trending-shows {
+        gap: 10px;
+    }
+
+    .show-item {
+        width: 140px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header .logo img {
+        height: 80px;
+    }
+
+    .featured {
+        padding: 20px;
+    }
+
+    .featured-video video {
+        height: 200px;
+    }
+
+    .featured-image img {
+        width: 150px;
+    }
+
+    .movie-description {
+        font-size: 14px;
+    }
+
+    .show-item {
+        width: 120px;
+        height: 170px;
+    }
+
+    #play-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .edit-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, #ff007f, #ff7e5f);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
