@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดการหนัง</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Movie Edit</h2>
+        <button id="addMovieButton" class="btn-submit">Add Movie</button>
+        <button id="showTableButton" class="btn-submit">Data</button>
+        <button id="homeButton" class="btn-submit">Go to Home</button>
+
+        <form id="movie-form" style="display: none;">
+            <h3>Add Movie</h3>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+            </div>
+            <div class="form-group">
+                <label for="movie_name">Name:</label>
+                <input type="text" id="movie_name" name="movie_name" required>
+            </div>
+            <div class="form-group">
+                <label for="poster_url">URL Poster:</label>
+                <input type="text" id="poster_url" name="poster_url" required>
+            </div>
+            <div class="form-group">
+                <label for="video_url">URL Video:</label>
+                <input type="text" id="video_url" name="video_url" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Add Movie</button>
+        </form>
+
+        <div id="movies-display">
+            <h3>Movie List</h3>
+            <div id="movies-container" class="movies-container"></div>
+        </div>
+
+        <div id="movies-table-container"></div>
+
+        <div id="movie-detail" style="display: none;">
+            <h3>Information Of Movie</h3>
+            <div id="detail-content"></div>
+            <button id="backButton" class="btn-submit">Back</button>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

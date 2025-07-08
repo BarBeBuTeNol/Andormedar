@@ -1,0 +1,220 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+    margin: 0;
+    padding: 20px;
+    color: #ecf0f1;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.4);
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-confirm {
+    background-color: #f39c12; /* เปลี่ยนสีปุ่ม */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-confirm:hover {
+    background-color: #e67e22; /* สีเข้มขึ้นเมื่อ hover */
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #219653;
+    transform: translateY(-2px);
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.poster {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.add-movie-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #27ae60;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#detail-content {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(44, 62, 80, 0.8);
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#detail-content:hover {
+    background-color: #6c757d; /* สีเทาเข้มที่ทันสมัย */
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.5);
+    transform: scale(1.02); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+}
+
+.tableData {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tableData th, .tableData td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.tableData th {
+    background-color: rgba(255, 255, 255, 0.2); /* พื้นหลังโปร่งแสง */
+    color: orangered;
+    font-weight: bold;
+}
+
+.tableData tr:hover td {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tableData td {
+    background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังโปร่งแสง */
+    color: orangered;
+}
+
+.tableData td img {
+    width: 50px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.tableData td img:hover {
+    transform: scale(1.1);
+}
+
+.tableData .btn-edit,
+.tableData .btn-delete {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.tableData .btn-edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.tableData .btn-edit:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.tableData .btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.tableData .btn-delete:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* เพิ่ม media queries สำหรับอุปกรณ์มือถือ */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .poster {
+        width: 100%;
+    }
+
+    .btn-submit, .btn-confirm {
+        width: 100%;
+    }
+}
